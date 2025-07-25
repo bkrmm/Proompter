@@ -24,7 +24,7 @@ builder = StateGraph(GraphState, input_schema=GraphState, output_schema=GraphSta
 
 from langchain_openai import ChatOpenAI
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key="AIzaSyBr01wyBax_1znBBa87t_N1QskRoWxuzRM")
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key="")
 
 def prompt_generator(state: GraphState) -> GraphState:
     instruction = "Your Objective is to assess the given prompt use your agentic structure and iterate and narrow down to 2 better, more specific and detailed prompts. You are a senior Prompt Engineer and it is your duty to concisely generate 2 modified prompts from the given prompt. Use various techniques such as in-context learning (where you give examples to teach the LLM without finetuning it) or anything and everything at your disposal, REMEMBER to give a clean output with no unnecessary sentences and cut out all the fluff"
